@@ -9,6 +9,7 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/auth.js";
+import userRoutes from "./routes/users.js";
 import { register } from "./controllers/auth.js";
 
 /* Configuration */
@@ -48,6 +49,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
 
 /* Mongoose Setup */
 const PORT = process.env.PORT || 6001; 
