@@ -28,7 +28,7 @@ const store = configureStore({ reducer: persistedReducer, middleware: (getDefaul
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( 
+root.render(  
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistStore(store)}>
